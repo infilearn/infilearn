@@ -255,7 +255,7 @@ footer{
     height: 80%;
     width: 100%;
     background-color: rgb(218, 218, 218);
-    background-image: url('../content/images/banner/banner.jpg');
+    background-image: url('../content/images/banner/banner.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size:cover;
@@ -1185,7 +1185,7 @@ input[type='radio']:checked:after {
     background-color: white;
     display: flex;
 }
-.subject-dashboard-search-bar-box input[type=search]{
+.subject-dashboard-search-bar-box input[type=text]{
     height: 40px;
     width: 305px;
     border: none;
@@ -1284,6 +1284,9 @@ input[type='radio']:checked:after {
     color: rgba(0, 0, 0, 0.5);
     text-decoration: none;
     cursor: pointer;
+}
+.subject-dashboard-profile-drowdown a:hover{
+    color: black;
 }
 
 .dropdwon-profile-hr{
@@ -1387,7 +1390,7 @@ input[type='radio']:checked:after {
     color: rgba(255, 255, 255, 0.5);
     border: 0.5px solid rgba(255, 255, 255, 0.5);;
 }
-/* Dashboard COntent */
+/* subject Dashboard COntent */
 .subject-dashboard-content-section{
     height: 100%;
     width: 100%;
@@ -1522,3 +1525,103 @@ input[type='radio']:checked:after {
 .subject-dashboard-content-section-chapter-single-vid-play-btn-author p{
     text-align: right;
 }
+
+/* Select subject PAge */
+.select-subject-desktop-header{
+    display: flex;
+}
+.select-subject-desktop-logo{
+    width: 230px;
+    padding-left: 100px;
+}
+
+.select-subject-dashboard-header-profile{
+    padding: 10px 10px 10px 10px;
+}
+.select-subject-dashboard-header-profile-box{
+    position: absolute;
+    right: 50px;
+    display: flex;
+
+}
+.select-subject-dashboard-header-profile p{
+    color: black;
+    font-size: 16px;
+    font-family: 'Nunito';
+    font-weight: 300;
+    margin: 10px 0px;
+}
+.select-subject-dashboard-profile-dp{
+    height: 35px;
+    width: 35px;
+    background-color: #979797;
+    margin: 4px 15px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.select-subject-dashboard-profile-dp img{
+    border-radius: 50%;
+}
+.select-subject-section{
+    padding-top: 60px;
+    background-color: #f2f2f2;
+}
+.select-subject-div{
+    padding: 40px 10%;
+}
+.select-subject-div-title h2{
+    color: #fe4a55;
+    font-size: 28px;
+    font-family: 'Lora';
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.select-subject-div-all-subjects{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap:50px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+.select-subject-single-sub{
+    height: 250px;
+    width: 260px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: #666 0px 2px 12px -5px;
+    text-align: center;
+    padding: auto;
+    cursor: pointer;
+}
+.select-subject-single-sub:hover{
+    transition: 300ms ease-in-out;
+    transform: scale(0.95);
+}
+
+.select-subject-img{
+    margin: 30px;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+.selec-subject-div-subject-name h3{
+    color: black;
+    font-size: 24px;
+    font-family: 'Nunito';
+    text-align: center;
+}
+
+/* Subject video Page */
+.chapter-video-page-desktop-header{
+    display: flex;
+    background-color: #221638;
+}
+#chapter-video-page-user-name{
+    color: white;
+}
+/* Header Style Imported from select subject panel */
