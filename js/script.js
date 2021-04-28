@@ -16,3 +16,34 @@ function showDrpDwn(){
         drpdwn.style.display = "block";
     }
 }
+
+window.onload = function showTechechContent(){
+        document.getElementById('teacher-select-subject-div').style.display ="block";
+        document.getElementById('teacher-sub-upload-vid').style.display ="none";
+        document.getElementById('teacher-sub-upload-file').style.display ="none";
+        document.getElementById('teacher-sec-back-btn').style.display ="none";
+}
+
+// Teacher Panel
+ 
+function showTechContent(nameofdiv){
+    
+    if(nameofdiv == "video-upload"){
+        document.getElementById('teacher-select-subject-div').style.display ="none";
+        document.getElementById('teacher-sub-upload-vid').style.display ="block";
+        document.getElementById('teacher-sub-upload-file').style.display ="none";
+        document.getElementById('teacher-sec-back-btn').style.display ="block";
+    }
+    if(nameofdiv == "file-upload"){
+        document.getElementById('teacher-select-subject-div').style.display ="none";
+        document.getElementById('teacher-sub-upload-file').style.display ="block";
+        document.getElementById('teacher-sub-upload-vid').style.display ="none";
+        document.getElementById('teacher-sec-back-btn').style.display ="block";
+    }
+    if(nameofdiv == "show-subjects"){
+        document.getElementById('teacher-select-subject-div').style.display ="block";
+        document.getElementById('teacher-sub-upload-file').style.display ="none";
+        document.getElementById('teacher-sub-upload-vid').style.display ="none";
+        document.getElementById('teacher-sec-back-btn').style.display ="none";
+    }
+}
