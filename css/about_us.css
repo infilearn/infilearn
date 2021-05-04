@@ -1,0 +1,15 @@
+.about-us-section-about-page{
+    padding: 60px 0px 0px 0px;
+    height: 100px;
+    width: 100%;
+    background-color:#211638;
+}
+
+.about-us-section-div-about-page{
+    padding: 15px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    color:white;
+    justify-content: center;
+}
