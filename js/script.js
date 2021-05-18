@@ -1,3 +1,48 @@
+
+    function showMobileNav() {
+        var navBar = document.getElementById('mobile-navbar-slide');
+        var hambrgr = document.getElementsByClassName("hamburger")[0];
+        if(navBar.style.left == "0%"){
+            navBar.style.left = "-90%";
+            hambrgr.classList.remove('is-active');
+        }
+        else{
+            navBar.style.left = "0%";
+            hambrgr.classList.add('is-active');
+        }
+    }
+
+    // Subject Dashboard NAvigation Mobile
+
+    function showMobileDashboardNav() {
+        var navBar = document.getElementById('subject-content-navigation-bar');
+        var hambrgr = document.getElementsByClassName("hamburger")[0];
+        if(navBar.style.left == "0%"){
+            navBar.style.left = "-100%";
+            hambrgr.classList.remove('is-active');
+        }
+        else{
+            navBar.style.left = "0%";
+            hambrgr.classList.add('is-active');
+        }
+    }
+
+     // Subject Dashboard NAvigation Mobile -Teacher Dashboard
+
+     function showMobileDashboardNavTeacher() {
+        var navBar = document.getElementById('teacher-dashboard-content-navigation-bar');
+        var hambrgr = document.getElementsByClassName("hamburger")[0];
+        if(navBar.style.left == "0%"){
+            navBar.style.left = "-100%";
+            hambrgr.classList.remove('is-active');
+        }
+        else{
+            navBar.style.left = "0%";
+            hambrgr.classList.add('is-active');
+        }
+    }
+
+
 function ModalShow(){
     document.getElementById("modal").style.zIndex = "3";
     window.location.href = "#modal";
@@ -33,20 +78,44 @@ function showTechContent(nameofdiv){
         document.getElementById('teacher-sub-upload-vid').style.display ="block";
         document.getElementById('teacher-sub-upload-file').style.display ="none";
         document.getElementById('teacher-sec-back-btn').style.display ="block";
+        document.getElementById('teacher-sub-history').style.display = "none";
     }
     if(nameofdiv == "file-upload"){
         document.getElementById('teacher-select-subject-div').style.display ="none";
         document.getElementById('teacher-sub-upload-file').style.display ="block";
         document.getElementById('teacher-sub-upload-vid').style.display ="none";
         document.getElementById('teacher-sec-back-btn').style.display ="block";
+        document.getElementById('teacher-sub-history').style.display = "none";
     }
     if(nameofdiv == "show-subjects"){
         document.getElementById('teacher-select-subject-div').style.display ="block";
         document.getElementById('teacher-sub-upload-file').style.display ="none";
         document.getElementById('teacher-sub-upload-vid').style.display ="none";
         document.getElementById('teacher-sec-back-btn').style.display ="none";
+        document.getElementById('teacher-sub-history').style.display = "none";
+    }
+    if(nameofdiv == "show-history"){
+        document.getElementById('teacher-select-subject-div').style.display ="none";
+        document.getElementById('teacher-sub-upload-vid').style.display ="none";
+        document.getElementById('teacher-sub-upload-file').style.display ="none";
+        document.getElementById('teacher-sec-back-btn').style.display ="block";
+        document.getElementById('teacher-sub-history').style.display = "block";
     }
 }
+
+// Teacher Panel Historry Page
+
+function ManageHistoryTeacher(command){
+    if(command == "showVideoTable"){
+        document.getElementById('teacher-dashboard-video-history-table').style.display = "block";
+        document.getElementById('teacher-dashboard-file-history-table').style.display = "none";
+    }
+    if(command == "showFileTable"){
+        document.getElementById('teacher-dashboard-video-history-table').style.display = "none";
+        document.getElementById('teacher-dashboard-file-history-table').style.display = "block";
+    }
+}
+
 
 // Manage UserS
 
@@ -245,7 +314,47 @@ function showSyllabusContentlist(){
     }
 }
 
+// Validate EMail
+function ValidateEmail(inputText){
+    var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if(inputText.value.match(mailformat)){
+        // alert("Valid email address!");
+        document.forgot_email_form.forgot_email.focus();
+        document.getElementById('forgot-email-input').style.backgroundColor = "#f6f1ff";
+        showEmailSendDiv();
+        return true;
+    }
+    else{
+        // alert("You have entered an invalid email address!");
+        document.forgot_email_form.forgot_email.focus();
+        document.getElementById('forgot-email-input').placeholder='Please Enter Your Email!';
+        document.getElementById('forgot-email-input').style.backgroundColor = "#ffecee";
+        return false;
+    }
+}
+ function showEmailSendDiv(){
+     document.getElementById('verification-page-info-stuffs').style.display = "none";
+     document.getElementById('verification-page-verify-otp-mesg').style.display = "block";
+     window.setTimeout(() => {
+         window.location.replace('verifyotp.html');
+     }, 9000);
+ }
 
+ function VerifyOtpRedirect(){
+    document.getElementById('verification-page-info-verify-otps').style.display = "none";
+    document.getElementById('verification-page-send-email-msgs').style.display = "block";
+    window.setTimeout(() => {
+        window.location.replace('newpassword.html');
+    }, 9000);
+}
+
+function SuccesfullPassChanged(){
+    document.getElementById('change-password-input-stuff').style.display = "none";
+    document.getElementById('password-changed-mesg').style.display = "block";
+    window.setTimeout(() => {
+        window.location.replace('index.html');
+    }, 9000);
+}
 
 
 

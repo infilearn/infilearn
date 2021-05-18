@@ -3,13 +3,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Infilearn</title>
+    <meta name="theme-color" content="#221638">
+    <title>Teacher Dashboard | Infilearn</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/admin.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
     <header>
         <div class="subject-dashboard-header-desktop">
+            <div id="mobile-hamburger-icon" class="mobile-hamburger-icon" >
+                <div id="subject-dashboard-hamburger" class="hamburger-mobile col" onclick="showMobileDashboardNavTeacher()">
+                    <div class="hamburger" id="hamburger-3">
+                      <span class="line"></span>
+                      <span class="line"></span>
+                      <span class="line"></span>
+                    </div>
+                </div>
+            </div>
             <div id="teacher-infilearn-logo" class="subject-dashboard-header-title">
                 <a href="index.html">
                     <img  class="infilearn-logo" src="content/icons/new.png" alt="Infilearn Logo" height="60px">
@@ -29,7 +40,7 @@
                     </div> <!--Dashboard user Profile Photo-->
                 </div>
                 <div id="subject-dashboard-profile-drowdown" class="subject-dashboard-profile-drowdown">
-                    <a href="#">Profile</a>
+                    <a href="profile.html">Profile</a>
                     <hr class="dropdwon-profile-hr">
                     <a href="index.html">Logout</a>
                 </div>
@@ -57,7 +68,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="teacher-dashboard-nav-links" onclick="showTechContent();" href="#">
+                        <a class="teacher-dashboard-nav-links" onclick="showTechContent('show-history');" href="#">
                             <img src="content/icons/history_white_36dp.svg" alt="history" height="35px">
                             <span>History</span>
                         </a>
@@ -208,7 +219,8 @@
                             </div>
                             <div class="teacher-dashboard-subject-upload-video-textbox-description">
                                 <label id="label-for-board-select" for="board-select">Description</label> <br>
-                                <input type="text" id="teacher-description-box">
+                                <!-- <input type="text" id="teacher-description-box"> -->
+                                <textarea name="" id="teacher-description-box" cols="30" rows="10"></textarea>
                             </div>
                         </div>
                     </div>
@@ -297,7 +309,8 @@
                             </div>
                             <div class="teacher-dashboard-subject-upload-video-textbox-description">
                                 <label id="label-for-board-select" for="board-select">Description</label> <br>
-                                <input type="text" id="teacher-description-box">
+                                <!-- <input type="text" id="teacher-description-box"> -->
+                                <textarea name="" id="teacher-description-box" cols="30" rows="10"></textarea>
                             </div>
                         </div>
                     </div>
@@ -312,12 +325,265 @@
                         </div>
                     </div>
                 </div>
+                <div id="teacher-sub-history" class="teacher-dashboard-subject-history">
+                    <!--  History -->
+                    <div id="teacher-panel-history" class="teacher-dashboard-history">
+                        <div class="admin-dashboard-manage-user-add-video-and-serch">
+                            <div id="teacher-history-panel-btns" class="admin-dashboard-manage-users-searchbox-add-vid">
+                                <button onclick="ManageHistoryTeacher('showVideoTable')">Videos</button>
+                                <button onclick="ManageHistoryTeacher('showFileTable')">Files</button>
+                            </div>
+                            <div id="admin-dashboard-manage-video-searchbox-dropdwn" class="admin-dashboard-manage-users-searchbox-dropdwn">
+                                <div class="admin-dashboard-manage-users-searchbox-add-vid">
+                                    <button onclick="showTechContent('show-subjects');">Back</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="teacher-panel-video-file-history">
+                            <!-- Video History -->
+                            <div id="teacher-dashboard-video-history-table" class="teacher-dashboard-history-table">
+                                <table class="teacher-dashboard-history-table">
+                                    <tr>
+                                        <th>Class</th>
+                                        <th>Subject</th>
+                                        <th>Chapter</th>
+                                        <th>Topic</th>
+                                        <th>Title</th>
+                                        <th>Description</th>
+                                        <th>Upload At</th>
+                                        <th>Views</th>
+                                    </tr>
+                                    <tr>
+                                        <td>5th</td>
+                                        <td>Science</td>
+                                        <td>Reproduction</td>
+                                        <td>Animals</td>
+                                        <td>Introduction...</td>
+                                        <td>lorem ipsum...</td>
+                                        <td>12 May 2021</td>
+                                        <td>3000</td>
+    
+                                    </tr>
+                                    <tr>
+                                        <td>5th</td>
+                                        <td>Science</td>
+                                        <td>Reproduction</td>
+                                        <td>Animals</td>
+                                        <td>Introduction...</td>
+                                        <td>lorem ipsum...</td>
+                                        <td>12 May 2021</td>
+                                        <td>3000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5th</td>
+                                        <td>Science</td>
+                                        <td>Reproduction</td>
+                                        <td>Animals</td>
+                                        <td>Introduction...</td>
+                                        <td>lorem ipsum...</td>
+                                        <td>12 May 2021</td>
+                                        <td>3000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5th</td>
+                                        <td>Science</td>
+                                        <td>Reproduction</td>
+                                        <td>Animals</td>
+                                        <td>Introduction...</td>
+                                        <td>lorem ipsum...</td>
+                                        <td>12 May 2021</td>
+                                        <td>3000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5th</td>
+                                        <td>Science</td>
+                                        <td>Reproduction</td>
+                                        <td>Animals</td>
+                                        <td>Introduction...</td>
+                                        <td>lorem ipsum...</td>
+                                        <td>12 May 2021</td>
+                                        <td>3000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5th</td>
+                                        <td>Science</td>
+                                        <td>Reproduction</td>
+                                        <td>Animals</td>
+                                        <td>Introduction...</td>
+                                        <td>lorem ipsum...</td>
+                                        <td>12 May 2021</td>
+                                        <td>3000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5th</td>
+                                        <td>Science</td>
+                                        <td>Reproduction</td>
+                                        <td>Animals</td>
+                                        <td>Introduction...</td>
+                                        <td>lorem ipsum...</td>
+                                        <td>12 May 2021</td>
+                                        <td>3000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5th</td>
+                                        <td>Science</td>
+                                        <td>Reproduction</td>
+                                        <td>Animals</td>
+                                        <td>Introduction...</td>
+                                        <td>lorem ipsum...</td>
+                                        <td>12 May 2021</td>
+                                        <td>3000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5th</td>
+                                        <td>Science</td>
+                                        <td>Reproduction</td>
+                                        <td>Animals</td>
+                                        <td>Introduction...</td>
+                                        <td>lorem ipsum...</td>
+                                        <td>12 May 2021</td>
+                                        <td>3000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5th</td>
+                                        <td>Science</td>
+                                        <td>Reproduction</td>
+                                        <td>Animals</td>
+                                        <td>Introduction...</td>
+                                        <td>lorem ipsum...</td>
+                                        <td>12 May 2021</td>
+                                        <td>3000</td>
+                                    </tr>
+                                    
+                                </table>
+                            </div>
+                            <!-- File History -->
+                            <div id="teacher-dashboard-file-history-table" class="teacher-dashboard-history-table">
+                                <table class="teacher-dashboard-history-table">
+                                    <tr>
+                                        <th>Class</th>
+                                        <th>Subject</th>
+                                        <th>Chapter</th>
+                                        <th>Topic</th>
+                                        <th>Title</th>
+                                        <th>Description</th>
+                                        <th>Upload At</th>
+                                        <th>Downloads</th>
+                                    </tr>
+                                    <tr>
+                                        <td>5th</td>
+                                        <td>Science</td>
+                                        <td>Reproduction</td>
+                                        <td>Animals</td>
+                                        <td>Introduction...</td>
+                                        <td>lorem ipsum...</td>
+                                        <td>12 May 2021</td>
+                                        <td>3000</td>
+    
+                                    </tr>
+                                    <tr>
+                                        <td>5th</td>
+                                        <td>Science</td>
+                                        <td>Reproduction</td>
+                                        <td>Animals</td>
+                                        <td>Introduction...</td>
+                                        <td>lorem ipsum...</td>
+                                        <td>12 May 2021</td>
+                                        <td>3000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5th</td>
+                                        <td>Science</td>
+                                        <td>Reproduction</td>
+                                        <td>Animals</td>
+                                        <td>Introduction...</td>
+                                        <td>lorem ipsum...</td>
+                                        <td>12 May 2021</td>
+                                        <td>3000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5th</td>
+                                        <td>Science</td>
+                                        <td>Reproduction</td>
+                                        <td>Animals</td>
+                                        <td>Introduction...</td>
+                                        <td>lorem ipsum...</td>
+                                        <td>12 May 2021</td>
+                                        <td>3000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5th</td>
+                                        <td>Science</td>
+                                        <td>Reproduction</td>
+                                        <td>Animals</td>
+                                        <td>Introduction...</td>
+                                        <td>lorem ipsum...</td>
+                                        <td>12 May 2021</td>
+                                        <td>3000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5th</td>
+                                        <td>Science</td>
+                                        <td>Reproduction</td>
+                                        <td>Animals</td>
+                                        <td>Introduction...</td>
+                                        <td>lorem ipsum...</td>
+                                        <td>12 May 2021</td>
+                                        <td>3000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5th</td>
+                                        <td>Science</td>
+                                        <td>Reproduction</td>
+                                        <td>Animals</td>
+                                        <td>Introduction...</td>
+                                        <td>lorem ipsum...</td>
+                                        <td>12 May 2021</td>
+                                        <td>3000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5th</td>
+                                        <td>Science</td>
+                                        <td>Reproduction</td>
+                                        <td>Animals</td>
+                                        <td>Introduction...</td>
+                                        <td>lorem ipsum...</td>
+                                        <td>12 May 2021</td>
+                                        <td>3000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5th</td>
+                                        <td>Science</td>
+                                        <td>Reproduction</td>
+                                        <td>Animals</td>
+                                        <td>Introduction...</td>
+                                        <td>lorem ipsum...</td>
+                                        <td>12 May 2021</td>
+                                        <td>3000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5th</td>
+                                        <td>Science</td>
+                                        <td>Reproduction</td>
+                                        <td>Animals</td>
+                                        <td>Introduction...</td>
+                                        <td>lorem ipsum...</td>
+                                        <td>12 May 2021</td>
+                                        <td>3000</td>
+                                    </tr>
+                                    
+                                </table>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.min.js" integrity="sha512-6ORWJX/LrnSjBzwefdNUyLCMTIsGoNP6NftMy2UAm1JBm6PRZCO1d7OHBStWpVFZLO+RerTvqX/Z9mBFfCJZ4A==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.min.js" integrity="sha512-6ORWJX/LrnSjBzwefdNUyLCMTIsGoNP6NftMy2UAm1JBm6PRZCO1d7OHBStWpVFZLO+RerTvqX/Z9mBFfCJZ4A==" crossorigin="anonymous" defer></script>
     <script>
 
         // For chap no and name
@@ -328,6 +594,11 @@
                 event.preventDefault();
             });
         });
+        $(document).ready(function(){
+        $(".hamburger").click(function(){
+            $(this).toggleClass("is-active");
+        });
+    });
 
     </script>
 </body>

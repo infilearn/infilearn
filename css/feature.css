@@ -110,7 +110,7 @@
 
 
 .site-content-section_ssa-2{
-    height: 150%;
+    height: 10%;
     width: 100%;
     background-color:black;      
 }
@@ -221,4 +221,14 @@
 .viewbox-title-step_ssa-2{
     padding-top: 0px;
     text-align: left;
+}
+
+.subject-images_ssa-2{
+    height: 300px;
+    width: 300px;
+    background-image: url('../content/feature/Subjects.PNG');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; 
+    background-blend-mode: multiply;
 }

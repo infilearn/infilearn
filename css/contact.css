@@ -102,32 +102,6 @@
 
 /* COntact us info tab */
 .contact-us-form-send-mesg-form-contact-us-info{
-    padding-left:30px;
     height: 500px;
     width: 400px;
-}
-
-.contact-us-form-contact-us-info-title{
-    padding: 20px;
-}
-
-.contact-us-form-contact-us-info-title-desc{
-    padding-left:20px;
-}
-
-.form-info-link-icon{
-    padding:15px;
-    font-size:15px;
-}
-
-#form-info-link-icon-1{
-    padding-left:40px;
-}
-
-#form-info-link-icon-2{
-    padding-left:40px;
-}
-
-#form-info-link-icon-3{
-    padding-left:40px;
 }

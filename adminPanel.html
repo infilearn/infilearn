@@ -3,10 +3,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fe4a55">
+    <meta name="theme-color" content="#fe4a55">
     <title>Home | Infilearn</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/admin.css">
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
 </head>
 <body>
     <header>
@@ -23,11 +25,11 @@
                 <div class="subject-dashboard-header-profile-box">
                     <p>Faijan Momin</p>
                     <div class="subject-dashboard-profile-dp" onclick="showDrpDwn();">
-                        <img src="https://static5.depositphotos.com/1049184/509/i/600/depositphotos_5099757-stock-photo-the-man-with-no-face.jpg" alt="user profile" height="100%" width="100%">
+                        <img src="https://lh3.googleusercontent.com/a-/AOh14GhuOyayeiU3_16FTH3WXTRNvnf26f2Xx734Gojg" alt="user profile" height="100%" width="100%">
                     </div> <!--Dashboard user Profile Photo-->
                 </div>
                 <div id="subject-dashboard-profile-drowdown" class="subject-dashboard-profile-drowdown">
-                    <a href="#">Profile</a>
+                    <a href="profile.html">Profile</a>
                     <hr class="dropdwon-profile-hr">
                     <a href="index.html">Logout</a>
                 </div>
@@ -1508,7 +1510,8 @@
                                     </select> -->
                                 </div>
                                 <div class="admin-panel-syllabus-input-content-text">
-                                    <input id="admin-panel-syllabus-input-content-text-desc" type="text" placeholder="Add Chapter Description">
+                                    <!-- <input id="admin-panel-syllabus-input-content-text-desc" type="text" placeholder="Add Chapter Description"> -->
+                                    <textarea id="admin-panel-syllabus-input-content-text-desc" name="" cols="30" rows="10" placeholder="Add Chapter Description"></textarea>
                                 </div>
                                 <div class="admin-panel-syllabus-input-content-submit">
                                     <button>Submit</button>
@@ -1924,14 +1927,15 @@
                             </div>
                             <div class="teacher-dashboard-subject-upload-video-textbox-description">
                                 <label id="label-for-board-select" for="board-select">Description</label> <br>
-                                <input type="text" id="teacher-description-box">
+                                <!-- <input type="text" id="teacher-description-box"> -->
+                                <textarea name="" id="teacher-description-box" cols="30" rows="10"></textarea>
                             </div>
                         </div>
                     </div>
                     <div class="teacher-dashboard-subject-upload-video-submit-data">
                         <div class="teacher-dashboard-subject-upload-video-submit-data-terms">
-                            <input type="checkbox" name="terms-conditns" id="terms-conditns"><span class="checkmark"></span>
-                            <span>I agree to <a href="#">terms and conditions</a></span>
+                            <!-- <input type="checkbox" name="terms-conditns" id="terms-conditns"><span class="checkmark"></span> -->
+                            <!-- <span>I agree to <a href="#">terms and conditions</a></span> -->
                         </div>
                         <div class="teacher-dashboard-subject-upload-video-submit-data-btns">
                             <input type="submit" value="Upload">
@@ -2014,14 +2018,15 @@
                             </div>
                             <div class="teacher-dashboard-subject-upload-video-textbox-description">
                                 <label id="label-for-board-select" for="board-select">Description</label> <br>
-                                <input type="text" id="teacher-description-box">
+                                <!-- <input type="text" id="teacher-description-box"> -->
+                                <textarea name="" id="teacher-description-box" cols="30" rows="10"></textarea>
                             </div>
                         </div>
                     </div>
                     <div class="teacher-dashboard-subject-upload-video-submit-data">
                         <div class="teacher-dashboard-subject-upload-video-submit-data-terms">
-                            <input type="checkbox" name="terms-conditns" id="terms-conditns"><span class="checkmark"></span>
-                            <span>I agree to <a href="#">terms and conditions</a></span>
+                            <!-- <input type="checkbox" name="terms-conditns" id="terms-conditns"><span class="checkmark"></span> -->
+                            <!-- <span>I agree to <a href="#">terms and conditions</a></span> -->
                         </div>
                         <div class="teacher-dashboard-subject-upload-video-submit-data-btns">
                             <input type="submit" value="Upload">
@@ -2035,8 +2040,8 @@
     </section>
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.min.js" integrity="sha512-6ORWJX/LrnSjBzwefdNUyLCMTIsGoNP6NftMy2UAm1JBm6PRZCO1d7OHBStWpVFZLO+RerTvqX/Z9mBFfCJZ4A==" crossorigin="anonymous"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.min.js" integrity="sha512-6ORWJX/LrnSjBzwefdNUyLCMTIsGoNP6NftMy2UAm1JBm6PRZCO1d7OHBStWpVFZLO+RerTvqX/Z9mBFfCJZ4A==" crossorigin="anonymous" defer></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js' defer></script>
 
     <script>
 
