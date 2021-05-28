@@ -66,13 +66,22 @@ body{
 .about-us-single-image-img{
     height: 250px;
     width: 100%;
-    background-color: rgb(192, 192, 192);
-    background-position: center;
+    background-color: white;
+    background-position: 0 0;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
 }
 #img-1{
-    background-image: url('../content/default/defaultprofile.png');
+    background-image: url('../content/about/sahil.png');
+}
+#img-2{
+    background-image: url('../content/about/faijan-1.png');
+}
+#img-3{
+    background-image: url('../content/about/shubham.png');
+}
+#img-4{
+    background-image: url('../content/about/sandip-1.png');
 }
 .about-us-single-image-name-desg{
     width: 100%;
