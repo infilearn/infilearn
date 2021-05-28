@@ -1,16 +1,17 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Infilearn</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
     <link rel="stylesheet" href="css/contact.css">
 
-<!--Header-->
- </head>
- <body>
+    <!--Header-->
+</head>
+
+<body>
     <header>
         <div class="desktop-header">
             <div id="mobile-hamburger-icon" class="mobile-hamburger-icon" >
@@ -23,17 +24,17 @@
                 </div>
             </div>
             <div class="desktop-logo">
-                <a href="index.html">
+                <a href="#" onclick="AdminConfirm();">
                     <img class="infilearn-logo" src="content/icons/new.png" alt="Infilearn Logo" height="60px">
                 </a>
             </div>
             <div id="mobile-navbar-slide" class="desktop-navigation-bar">
                 <ul class="desktop-navbar-links">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="#">Features</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#" onclick="AdminConfirm();">Contact us</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="FAQ.html">FAQ</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contactus.html">Contact us</a></li>
                 </ul>
             </div>
             <div class="desktop-login-button">
@@ -85,33 +86,34 @@
                         <p>Whether a help,doubt,ask a question,or anything else feel free to contact us</p>
                     </div>
                     <div class="contact-us-form-contact-us-info-all-links">
-                        
-                        <ul class="footer-contact-us-links">
-                            <li>  
-                                    <div id="form-info-link-icon-1" class="form-info-link-icon"> 
-                                    <img src="content/contact_us/location_on_black_48dp.svg" alt="Infilearn Location" height="30px" width="30px"><span><b>Address:</b> Pune, Maharashtra, India</span></div>
+
+                        <ul class="contact-us-links-contact-form">
+                            <li>
+                                <div id="form-info-link-icon-1" class="form-info-link-icon">
+                                    <img src="content/contact_us/location_on_black_48dp.svg" alt="Infilearn Location"
+                                        height="30px" width="30px"><span><b>Address:</b> Pune, Maharashtra, India</span>
+                                </div>
                             </li>
 
                             <li>
                                 <div id="form-info-link-icon-2" class="form-info-link-icon">
-                                     <img src="content/contact_us/email_black_24dp.svg" alt="Infilearn Location" height="30px" width="30px"><span><b>Email:</b> infilearnn@gmail.com</span></div>
+                                    <img src="content/contact_us/email_black_24dp.svg" alt="Infilearn Location"
+                                        height="30px" width="30px"><span><b>Email:</b> infilearnn@gmail.com</span></div>
                             </li>
                             <li>
-                                <div id="form-info-link-icon-3" class="form-info-link-icon"> 
-                                    <img src="content/contact_us/website.svg" alt="Infilearn Location" height="30px" width="30px"><span><b>Website:</b> www.infilearn.com</span></div>
+                                <div id="form-info-link-icon-3" class="form-info-link-icon">
+                                    <img src="content/contact_us/website.svg" alt="Infilearn Location" height="30px"
+                                        width="30px"><span><b>Website:</b> www.infilearn.com</span></div>
                             </li>
-                         </ul>  
-                      
+                        </ul>
+
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-
-
     <!-- Footer -->
-
     <footer>
         <div class="footer">
             <div class="footer-content">
@@ -171,32 +173,34 @@
     </footer>
 
 
-        <!-- Modal -->
-    
-<div class="modal" id="modal">
-    <div class="modal-content">
-        <a onclick="HideModal();" class="modal-close" title="Close Modal">X</a>
-        <h3>Infilearn</h3>
-        <div class="modal-area">
-            <div class="modal-input">
-                <form action="selectSubject.html" >
-                    <label for="username">EMAIL ADDRESS</label><br>
-                    <input type="text" class="modal-input-box" required><br>
-                    <label for="password">PASSWORD</label><br>
-                    <input type="password" class="modal-input-box" required><br>
-                    <div class="modal-submit-forgot">
-                        <button class="login-modal-btn" type="submit">Login</button>
-                        <a >Forgot Password?</a>
-                    </div>
-                </form>
-            </div>
-            <hr class="login-modal-hr">
-            <div class="modal-signup-page-link">
-                <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+    <!-- Modal -->
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <a onclick="HideModal();" class="modal-close" title="Close Modal">X</a>
+            <h3>Infilearn</h3>
+            <div class="modal-area">
+                <div class="modal-input">
+                    <form action="selectSubject.html">
+                        <label for="username">EMAIL ADDRESS</label><br>
+                        <input type="text" class="modal-input-box" required><br>
+                        <label for="password">PASSWORD</label><br>
+                        <input type="password" class="modal-input-box" required><br>
+                        <div class="modal-submit-forgot">
+                            <button class="login-modal-btn" type="submit">Login</button>
+                            <a>Forgot Password?</a>
+                        </div>
+                    </form>
+                </div>
+                <hr class="login-modal-hr">
+                <div class="modal-signup-page-link">
+                    <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+                </div>
             </div>
         </div>
     </div>
-  </div>
+    <script src="js/script.js" defer></script>
 
-    </body>
-    </html>>
+</body>
+
+</html>

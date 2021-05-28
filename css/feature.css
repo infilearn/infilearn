@@ -110,7 +110,7 @@
 
 
 .site-content-section_ssa-2{
-    height: 10%;
+    height: 100%;
     width: 100%;
     background-color:black;      
 }
@@ -231,4 +231,9 @@
     background-repeat: no-repeat;
     background-size: contain; 
     background-blend-mode: multiply;
+}
+
+@media only screen and (min-width:450px){
+
+ 
 }
